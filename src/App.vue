@@ -1,23 +1,35 @@
 <template>
   <Dialog ref="dialog">
-    <h2>Dialog header</h2>
-    <p class="paragraph">Some longer dialog description</p>
-    <Tabs>
-      <Tab title="Tab 1" class="users-tab">
-        <UsersTable :max="20" />
-        <Actions>
-          <button>New</button>
-          <button>Delete</button>
-        </Actions>
-      </Tab>
-      <Tab title="Tab 2" class="users-tab">
-        <UsersTable :max="2" />
-        <Actions>
-          <button>New</button>
-          <button>Delete</button>
-        </Actions>
-      </Tab>
-    </Tabs>
+    <main>
+      <h2>Dialog header</h2>
+      <p class="paragraph">Some longer dialog description</p>
+      <Tabs>
+        <Tab title="Tab 1" class="tab1">
+          <Panel class="wrapper">
+            <UsersTable :max="7" />
+            <Panel>
+              <p>Hello!</p>
+              <p>Hello!</p>
+              <p>Hello!</p>
+              <p>Hello!</p>
+              <p>Hello!</p>
+              <p>Hello!</p>
+            </Panel>
+          </Panel>
+          <Actions>
+            <button>New</button>
+            <button>Delete</button>
+          </Actions>
+        </Tab>
+        <Tab title="Tab 2" class="tab2">
+          <UsersTable :max="7" />
+          <Actions>
+            <button>New</button>
+            <button>Delete</button>
+          </Actions>
+        </Tab>
+      </Tabs>
+    </main>
   </Dialog>
 </template>
 
@@ -27,6 +39,7 @@ import Dialog from './components/Dialog.vue'
 import Tabs from './components/Tabs.vue'
 import Tab from './components/Tab.vue'
 import UsersTable from './components/UsersTable.vue'
+import Panel from './components/Panel.vue'
 import Actions from './components/Actions.vue'
 
 const dialog = ref<InstanceType<typeof Dialog>>()
@@ -41,10 +54,25 @@ dialog {
   width: 50dvw;
   height: 50dvh;
   overflow: hidden;
+
+  & main {
+    display: grid;
+    gap: 4px;
+    grid-template-rows: auto auto 1fr;
+  }
 }
 
-.users-tab {
-  display: grid;
+h2 {
+  font-size: 1.5rem;
+}
+
+.tab1, .tab2 {
+  gap: 4px;
   grid-template-rows: 1fr auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 </style>

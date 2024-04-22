@@ -16,14 +16,13 @@ provideTabsContext()
 
 <style lang="postcss" scoped>
 .tabs {
-  height: 100%;
   overflow: hidden;
   display: grid;
   grid-template-rows: auto 1fr;
 }
 
 .tabs-container {
-  height: 100%;
   overflow: hidden;
+  border: solid 1px black;
 }
 </style>

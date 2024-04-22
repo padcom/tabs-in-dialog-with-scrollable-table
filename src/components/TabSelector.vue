@@ -20,13 +20,20 @@ ul.tab-selector {
   display: flex;
   gap: 16px;
 
-  li.tab {
+  & li.tab {
     list-style: none;
     cursor: pointer;
     user-select: none;
+    border: solid 1px transparent;
+    padding: 2px 4px;
 
     &.active {
-      -webkit-text-stroke: 0.04ex;
+      -webkit-text-stroke: 0.06ex;
+      border-top: solid 1px black;
+      border-left: solid 1px black;
+      border-right: solid 1px black;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
     }
   }
 }

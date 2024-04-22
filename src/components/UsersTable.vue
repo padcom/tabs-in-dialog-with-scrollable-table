@@ -6,6 +6,7 @@
         <th>First name</th>
         <th>Last name</th>
         <th>Age</th>
+        <th>Test</th>
       </tr>
     </thead>
     <tbody>
@@ -14,6 +15,7 @@
         <td>{{ user.firstName }}</td>
         <td>{{ user.lastName }}</td>
         <td>{{ user.age }}</td>
+        <td class="test"><input type="checkbox"></td>
       </tr>
     </tbody>
   </ScrollableTable>
@@ -44,3 +46,9 @@ onMounted(async () => {
   }
 })
 </script>
+
+<style lang="postcss" scoped>
+.test {
+  text-align: center;
+}
+</style>

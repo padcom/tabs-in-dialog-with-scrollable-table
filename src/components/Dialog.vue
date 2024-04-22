@@ -1,8 +1,6 @@
 <template>
   <dialog ref="dialog" :open>
-    <div class="dialog-container" v-bind="$attrs">
-      <slot />
-    </div>
+    <slot />
   </dialog>
 </template>
 
@@ -23,12 +21,10 @@ defineExpose({ showModal, close })
 
 <style lang="postcss" scoped>
 dialog {
-  margin: auto;
+  padding: 4px;
 }
 
-.dialog-container {
+dialog > ::v-deep(main) {
   height: 100%;
-  display: grid;
-  grid-template-rows: auto auto 1fr;
 }
 </style>
