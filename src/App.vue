@@ -5,6 +5,9 @@
       <p class="paragraph">Some longer dialog description</p>
       <Tabs>
         <Tab title="Tab 1" class="tab1">
+          <Panel :style="{ 'margin-top': '8px' }">
+            This is some text
+          </Panel>
           <Panel class="wrapper">
             <UsersTable :max="7" />
             <Panel>
@@ -68,6 +71,13 @@ h2 {
 
 .tab1, .tab2 {
   gap: 4px;
+}
+
+.tab1 {
+  grid-template-rows: auto 1fr auto;
+}
+
+.tab2 {
   grid-template-rows: 1fr auto;
 }
 
