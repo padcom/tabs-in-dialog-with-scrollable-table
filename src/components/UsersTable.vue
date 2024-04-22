@@ -1,5 +1,5 @@
 <template>
-  <ScrollableTable>
+  <ScrollableTable class="users">
     <thead>
       <tr>
         <th>ID</th>
@@ -40,6 +40,3 @@ onMounted(async () => {
   }
 })
 </script>
-
-<style lang="postcss" scoped>
-</style>

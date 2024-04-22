@@ -1,7 +1,7 @@
 <template>
   <div class="tabs">
     <TabSelector />
-    <div class="container">
+    <div class="tabs-container">
       <slot />
     </div>
   </div>
@@ -13,11 +13,3 @@ import { provideTabsContext } from './tabs'
 
 provideTabsContext()
 </script>
-
-<style lang="postcss" scoped>
-.tabs {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  background-color: burlywood
-}
-</style>

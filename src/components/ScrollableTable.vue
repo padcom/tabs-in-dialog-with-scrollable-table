@@ -12,9 +12,10 @@
 
   & table {
     width: 100%;               /* Since the scrolling happens on the parent level it's best */
-                              /* to make the table 100% wide. That way the scrollbar is glued to it. */
+                               /* to make the table 100% wide. That way the scrollbar is glued to it. */
     border-collapse: collapse; /* Because the scrolling happens on the parent if there is a border spacing */
-                              /* it will make the header bounce by the width of the spacing when scrolling */
+                               /* it will make the header bounce by the width of the spacing when scrolling */
+    background-color: white;
   }
 
   /* Sticky table header */

@@ -1,17 +1,14 @@
 <template>
   <Dialog ref="dialog">
     <h2>Dialog header</h2>
-    <p>Some longer dialog description</p>
+    <p class="paragraph">Some longer dialog description</p>
     <Tabs>
-      <Tab title="Tab 1" class="tab-with-table-and-actions">
+      <Tab title="Tab 1">
         <UsersTable />
         <Actions>
           <button>New</button>
           <button>Delete</button>
         </Actions>
-      </Tab>
-      <Tab title="Tab 2">
-        <p>This is an empty tab</p>
       </Tab>
     </Tabs>
   </Dialog>
@@ -32,24 +29,58 @@ onMounted(() => {
 })
 </script>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
 .dialog {
   width: 50dvw;
   height: 50dvh;
+  margin: auto;
+}
 
-  &::v-deep(.container) {
-    grid-template-rows: min-content min-content 1fr;
-  }
+.dialog-container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
 
-  & .tab-with-table-and-actions {
-    display: grid;
-    grid-template-rows: 1fr auto;
+.tabs {
+  height: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.tabs-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.tab {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+
+  & table {
     width: 100%;
-    height: 100%;
-  }
-
-  & .users {
-    background-color: red;
   }
 }
+
+    /*
+    .tabs {
+      background-color: cornflowerblue;
+
+      & .tab.tab-with-table-and-actions {
+        display: grid;
+        grid-template-rows: 1fr min-content;
+        background-color: cadetblue;
+
+        .users {
+          overflow-y: auto;
+        }
+
+        .actions {
+          background-color: dodgerblue;
+        }
+      }
+    }
+    */
 </style>

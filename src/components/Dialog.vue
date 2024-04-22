@@ -1,6 +1,6 @@
 <template>
-  <dialog ref="dialog" :open class="dialog">
-    <div class="container" v-bind="$attrs">
+  <dialog ref="dialog" class="dialog" :open>
+    <div class="dialog-container" v-bind="$attrs">
       <slot />
     </div>
   </dialog>
@@ -20,12 +20,3 @@ const { showModal, close } = provideDialogContext(dialog)
 
 defineExpose({ showModal, close })
 </script>
-
-<style lang="postcss" scoped>
-.container {
-  display: grid;
-  width: 100%;
-  height: 100%;
-  background-color: antiquewhite;
-}
-</style>
