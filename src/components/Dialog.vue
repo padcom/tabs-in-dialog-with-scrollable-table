@@ -1,5 +1,5 @@
 <template>
-  <dialog ref="dialog" class="dialog" :open>
+  <dialog ref="dialog" :open>
     <div class="dialog-container" v-bind="$attrs">
       <slot />
     </div>

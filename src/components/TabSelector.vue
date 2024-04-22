@@ -15,7 +15,7 @@ import { useTabsContext } from './tabs'
 const { tabs, selectTab, selectedTab } = useTabsContext()
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
 ul.tab-selector {
   display: flex;
   gap: 16px;

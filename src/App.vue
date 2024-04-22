@@ -36,8 +36,8 @@ onMounted(() => {
 })
 </script>
 
-<style lang="postcss">
-.dialog {
+<style lang="postcss" scoped>
+dialog {
   width: 50dvw;
   height: 50dvh;
   overflow: hidden;
@@ -48,10 +48,3 @@ onMounted(() => {
   grid-template-rows: 1fr auto;
 }
 </style>
-
-<style lang="postcss">
-div, ul, li {
-  background-color: transparent;
-}
-</style>
-
