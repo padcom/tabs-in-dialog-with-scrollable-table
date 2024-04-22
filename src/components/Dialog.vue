@@ -20,3 +20,15 @@ const { showModal, close } = provideDialogContext(dialog)
 
 defineExpose({ showModal, close })
 </script>
+
+<style lang="postcss" scoped>
+dialog {
+  margin: auto;
+}
+
+.dialog-container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+</style>

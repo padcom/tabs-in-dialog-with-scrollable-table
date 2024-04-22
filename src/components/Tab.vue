@@ -24,3 +24,9 @@ onBeforeUnmount(() => {
   removeTab({ id: id.value, title: props.title })
 })
 </script>
+
+<style lang="postcss" scoped>
+.tab {
+  height: 100%;
+}
+</style>

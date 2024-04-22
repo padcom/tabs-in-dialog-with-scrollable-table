@@ -23,6 +23,10 @@
 import { onMounted, ref } from 'vue'
 import ScrollableTable from './ScrollableTable.vue'
 
+const props = defineProps({
+  max: { type: Number, default: 10000 },
+})
+
 interface User {
   id: string
   firstName: string
@@ -35,8 +39,8 @@ const users = ref([] as User[])
 onMounted(async () => {
   const response = await fetch('https://dummyjson.com/users')
   if (response.ok) {
-    const data = await response.json()
-    users.value = data.users
+    const data = (await response.json()) as { users: any[] }
+    users.value = data.users.slice(0, props.max)
   }
 })
 </script>

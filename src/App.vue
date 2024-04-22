@@ -3,8 +3,15 @@
     <h2>Dialog header</h2>
     <p class="paragraph">Some longer dialog description</p>
     <Tabs>
-      <Tab title="Tab 1">
-        <UsersTable />
+      <Tab title="Tab 1" class="users-tab">
+        <UsersTable :max="20" />
+        <Actions>
+          <button>New</button>
+          <button>Delete</button>
+        </Actions>
+      </Tab>
+      <Tab title="Tab 2" class="users-tab">
+        <UsersTable :max="2" />
         <Actions>
           <button>New</button>
           <button>Delete</button>
@@ -33,54 +40,18 @@ onMounted(() => {
 .dialog {
   width: 50dvw;
   height: 50dvh;
-  margin: auto;
-}
-
-.dialog-container {
-  height: 100%;
-  display: grid;
-  grid-template-rows: auto auto 1fr;
-}
-
-.tabs {
-  height: 100%;
-  overflow: hidden;
-  display: grid;
-  grid-template-rows: auto 1fr;
-}
-
-.tabs-container {
-  height: 100%;
   overflow: hidden;
 }
 
-.tab {
-  height: 100%;
+.users-tab {
   display: grid;
   grid-template-rows: 1fr auto;
-
-  & table {
-    width: 100%;
-  }
 }
-
-    /*
-    .tabs {
-      background-color: cornflowerblue;
-
-      & .tab.tab-with-table-and-actions {
-        display: grid;
-        grid-template-rows: 1fr min-content;
-        background-color: cadetblue;
-
-        .users {
-          overflow-y: auto;
-        }
-
-        .actions {
-          background-color: dodgerblue;
-        }
-      }
-    }
-    */
 </style>
+
+<style lang="postcss">
+div, ul, li {
+  background-color: transparent;
+}
+</style>
+

@@ -8,7 +8,9 @@
 
 <style lang="postcss" scoped>
 .scrollable-table {
+  height: 100%;
   overflow-y: auto; /* The table will be scrollable vertically */
+  position: relative;
 
   & table {
     width: 100%;               /* Since the scrolling happens on the parent level it's best */
@@ -19,7 +21,7 @@
   }
 
   /* Sticky table header */
-  & thead {
+  & th {
     position: sticky;
     top: 0;
     background-color: red; /* It is necessary to set the background color because by default it is transparent! */
