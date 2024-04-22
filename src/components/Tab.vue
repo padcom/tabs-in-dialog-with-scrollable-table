@@ -28,5 +28,7 @@ onBeforeUnmount(() => {
 <style lang="postcss" scoped>
 .tab {
   height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 </style>

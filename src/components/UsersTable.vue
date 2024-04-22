@@ -1,5 +1,5 @@
 <template>
-  <ScrollableTable class="users">
+  <ScrollableTable>
     <thead>
       <tr>
         <th>ID</th>

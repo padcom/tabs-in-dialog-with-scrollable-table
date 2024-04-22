@@ -6,10 +6,9 @@
   </div>
 </template>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
 .scrollable-table {
-  height: 100%;
-  overflow-y: auto; /* The table will be scrollable vertically */
+  overflow-y: scroll; /* The table will be scrollable vertically */
   position: relative;
 
   & table {
@@ -21,7 +20,7 @@
   }
 
   /* Sticky table header */
-  & th {
+  & thead {
     position: sticky;
     top: 0;
     background-color: red; /* It is necessary to set the background color because by default it is transparent! */
